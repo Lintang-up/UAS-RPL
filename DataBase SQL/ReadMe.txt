@@ -1,0 +1,2 @@
+buat database dengan nama pendaftaran_siswa
+import pendaftaran_siswa.sql kedalam database pendaftaran_siswa

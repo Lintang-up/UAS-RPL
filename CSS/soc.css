@@ -1,0 +1,96 @@
+/* body {
+  background-color: #d34c65;
+  text-align: center;
+} */
+
+.icon {
+  /* height: 50px; */
+  width: 200px;
+  padding: 5px 0px 5px 40px;
+  margin: 10px 0 55px 190px;
+  background-color: white;
+  font-family: "system-ui";
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Icons */
+
+.icon a {
+  color: #fff;
+  background: #243545;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-family: fontawesome;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 28px;
+  padding-top: 12px;
+  margin: 0 5px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon a:hover {
+  background: #ededed;
+}
+
+/* pop-up text */
+
+.icon a span {
+  color: #666;
+  position: absolute;
+  font-family: sans-serif;
+  bottom: 0;
+  left: -25px;
+  right: -25px;
+  padding: 5px 7px;
+  font-size: 14px;
+  border-radius: 2px;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+
+.icon a span:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 40px;
+}
+
+/* text pops up when icon is in hover state */
+
+.icon a:hover span {
+  bottom: 50px;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* font awesome icons */
+
+.icon a:nth-of-type(1):before {
+  content: "\f232";
+}
+.icon a:nth-of-type(2):before {
+  content: "\f095";
+}
+.icon a:nth-of-type(3):before {
+  content: "\f2b6";
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #dedede;
+  width: 100%;
+  height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  color: #878787;
+
+  --menu-item-size: -25px;
+  --green-color: #329680;
+  --blue-color: #099c95;
+  --dark-green-color: #175b52;
+  --white-color: #fff;
+  --gray-color: #ededed;
+  --container-width: 700px;
+  --container-height: 400px;
+  --line-offset: calc(
+    (100% - var(--container-height)) / 2 + var(--menu-item-size) + 0.6em
+  );
+}
+
+.navbar {
+  padding: 0.1px;
+  background: #243545;
+}
+
+.container {
+  height: 80px;
+  width: var(--container-width);
+  margin-left: 340px;
+  margin-top: 30px;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0px 0 0 0px;
+  padding: 0px 0px 0 0;
+  /* align: right; */
+}
+
+.main-menu > li {
+  text-align: center;
+  box-sizing: border-box;
+  transition: 0.5s linear all;
+  background: var(--green-color);
+  color: var(--dark-green-color);
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.main-menu > li:nth-child(1) {
+  transform: translateX(360%);
+}
+
+.main-menu i {
+  margin: 20px;
+  margin-right: 5px;
+}
+
+.main-menu > li:hover:not(.active) {
+  background: linear-gradient(to right, var(--green-color), var(--blue-color));
+  color: var(--white-color);
+}
+
+.main-menu > li:active:not(.active),
+.main-menu > li:active:not(.with-submenu) {
+  background: var(--blue-color);
+  color: var(--white-color);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  list-style: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  min-width: calc(3.5 * var(--menu-item-size) - 5%);
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.with-submenu {
+  position: relative;
+  display: inline-block;
+}
+
+.with-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu > li {
+  background: #dedede;
+  border-bottom: 1px solid var(--gray-color);
+  color: #777;
+  padding: 1.2em 1em;
+  transition: 0.3s all linear;
+  display: block;
+  line-height: 0%;
+}
+
+.submenu > li > a {
+  color: #777;
+  text-decoration: none;
+}
+
+.submenu > li:hover {
+  background: var(--gray-color);
+}
+
+.submenu > li:active {
+  background: var(--white-color);
+}
+/* -------------------- */
